@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+}
+
+/* HEADER */
+.header {
+  padding: 20px;
+}
+
+.header img {
+  width: 150px;
+}
+
+/* CONTENEDOR */
+.container {
+  padding: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* TARJETAS */
+.card {
+  position: relative;
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  margin-bottom: 15px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* Overlay oscuro  */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+  border-radius: 15px;
+}
+
+.card h3,
+.card p {
+  position: relative;
+  z-index: 1;
+}
+
+/* FONDOS */
+.card:nth-child(1) {
+  background-image: url('../assets/img/fondo-de-jaliscotv.webp');
+}
+
+.card:nth-child(2) {
+  background-image: url('../assets/img/programas-sociales.webp');
+}
+
+.card:nth-child(3) {
+  background-image: url('../assets/img/fondo-de-salud.webp');
+}
+
+.card:nth-child(4) {
+  background-image: url('../assets/img/fondo-de-educacion.webp');
+}
+
+.card:nth-child(5) {
+  background-image: url('../assets/img/fondo-de-infraestructura.webp');
+}
+
+/* BOTÓN ROJO */
+.panic {
+  width: 100%;
+  background: #e53935;
+  color: white;
+  border: none;
+  padding: 20px;
+  border-radius: 15px;
+  font-size: 20px;
+  margin-top: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 👈 CLAVE */
+}
+
+.panic-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 👈 alinea a la izquierda */
+}
+
+.panic-text span {
+  font-weight: bold;
+}
+
+.panic-text small {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.panic-number {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+/* BOTÓN MORADO */
+.internet {
+  width: 100%;
+  margin-top: 15px;
+  background:  rgb(175, 12, 175) ;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 16px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  margin-top: 30px;
+}
+
+
+/*  RESPONSIVE  */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+
+  .card p {
+    font-size: 13px;
+  }
+
+  .panic {
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .internet {
+    font-size: 14px;
+  }
+}
